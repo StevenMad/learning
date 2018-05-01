@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- code mirror-->
+    <script src="js/codemirror-5.37.0/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="js/codemirror-5.37.0/lib/codemirror.css">
+    <script src="js/codemirror-5.37.0/mode/javascript/javascript.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Styles-->
+    <style>
+        .courseContent {
+            overflow-y: scroll;
+            height: 84vh;
+        }
+
+        .exemple {
+            font-style: italic;
+            background-color: black;
+            color: green;
+        }
+
+        code {
+            background-color: black;
+            color: green;
+        }
+
+        body {
+            overflow-y: hidden;
+            background-color: #424242;
+            color: white;
+        }
+
+        textarea {
+            height: 30vh;
+        }
+
+        .result {
+            background-color: grey;
+            text-align: center;
+            margin-bottom: 3px;
+            margin-right: 7px;
+            padding-top: 2.9vh;
+            height: 8vh;
+        }
+        .correct{
+            background-color: #4CAF50;
+        }
+
+        .faux{
+            background-color:#BF360C;
+        }
+    </style>
+    <!-- end of styles -->
+    <nav>
+        <div class="nav-wrapper light-blue accent-3">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li>
+                    <a href="html">HTML</a>
+                </li>
+                <li>
+                    <a href="css.html">CSS</a>
+                </li>
+                <li>
+                    <a href="php">PHP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col s3 z-depth-2">
+            <div class="courseTitle">
+                <h3>Javascript Basics</h3>
+            </div>
+            <div class="courseContent">
+                <h5>Ecrire du javascript</h5>
+                <p>
+                    <code>1+1</code> calcule la somme 1+1</p>
+                <p>
+                    <code>console.log("hello world");</code> affiche dans la console la phrase hello world</p>
+                <p>
+                    <code>var x=1</code> déclare une variable nommée x à qui on assigne la valeur 1</p>
+                <p>
+                    <code>;</code> Marque la fin d'une ligne d'instruction</p>
+                <p>
+                    <code>{ ... }</code> "{" designe le début d'un bloc et "}" désigne la fin du bloc</p>
+                <hr/>
+                <p>
+                    <code><p>var x=1;</p><p>x=x+1;</p></code>
+                </p>
+                <p>La premiere instruction assigne 1 à x. La seconde instruction incrémente la valeur de x de 1</p>
+                <hr/>
+                <h5>Les boucles et les conditions</h5>
+                <p>
+                    <code>for(init ; cond a remplir ; iteration){<br/>...<br>}</code>
+                </p>
+                <p>init : Désigne l'état initial de la boucle</p>
+                <p>cond à remplir: tant que la condition est remplie lancer la suite d'instructions</p>
+                <p>iteration : à la fin des instructions appliquer l'itération</p>
+                <p>... : suite d'instructions</p>
+                <p>
+                    <code>while(cond à remplir){ ... }</code>
+                </p>
+                <p>Tant que la condition est remplie effectuer la suite d'intructions comprise dans le bloc</p>
+                <hr/>
+                <h5>Les fonctions</h5>
+                <p>Declaration d'une fonction</p>
+                <code>function nomDeLaFonction(attr1,attr2){<br>...<br>}</code>
+                <p>function: mot indispensable pour signifier que l'on déclare une fonction</p>
+                <p>nomDeLaFonction: le nom qu'on veut donner à la fonction</p>
+                <p>attr1, attr2: une suite de paramètres à assigner à la fonction. On peut avoir 0,1,ou plusieurs paramètres</p>
+                <p>Les paramètres sont espacés par des
+                    <code>,</code>
+                </p>
+                <br>
+                <p>Retour d'une fonction</p>
+                <p>Les fonctions sont utilisées pour executer une suite d'instructions qui pourraient être utilisées plusieurs
+                    fois. En général les fonctions retournent un résultat</p>
+                <p>Dire à une fonction qu'elle renvoie un résultat s'écrit comme suit :
+                    <code>return ... ;</code>
+                </p>
+                <p>Appel d'une fonction</p>
+                <p>Considérant que la fonction nomDeLaFonction a été déclarée, on l'appelle ensuite comme ceci:</p>
+                <code>nomDeLaFonction(monParam1,monParam2);</code>
+            </div>
+        </div>
+        <div class="exercices col s9 z-depth-2">
+            <div class="sujet z-depth-2">
+                <p>Nous allons le système de panier du site web de notre client. Pour cela les besoins spécifiés sont les suivants:
+                    <ul>
+                        <li>Modifier le prix en fonction de la quantité choisie</li>
+                        <li>Avoir la somme totale des produits choisis</li>
+                        <li>Verifier que le produit est toujours disponible</li>
+                        <li>Si le total est supérieur à 100$ </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="exo1 z-depth-2">
+                <p>Nous allons coder la somme de deux produits</p>
+                <p>Ecrire une fonction <code>calculer</code> qui prend deux parametres et qui renvoie la somme des deux entiers</p>
+                <div class="row">
+                    <div class="col s6">
+                        <textarea id="code"></textarea>
+                    </div>
+                    <div class="col s2">
+                        <button class="btn">Exo</button>
+                    </div>
+                    <script id="jscode"></script>
+                    <div class="col s4">
+                        <div class="result idle">
+                            Test 01
+                        </div>
+                        <div class="result idle">
+                            Test 02
+                        </div>
+                        <div class="result idle">
+                            Test 03
+                        </div>
+                        <div class="result idle">
+                            Test 04
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exo2 z-depth-2">
+                    <p>Nous allons effectuer la somme de plusieurs produits</p>
+                    <p>Ecrire une fonction <code>calculeTable</code> qui prend un tableau et qui renvoie la somme des valeurs du tableau</p>
+                    <div class="row">
+                        <div class="col s6">
+                            <textarea id="code1"></textarea>
+                        </div>
+                        <div class="col s2">
+                            <button class="btn">Exo1</button>
+                        </div>
+                        <script id="jscode1"></script>
+                        <div class="col s4">
+                            <div class="result idle">
+                                Test 01
+                            </div>
+                            <div class="result idle">
+                                Test 02
+                            </div>
+                            <div class="result idle">
+                                Test 03
+                            </div>
+                            <div class="result idle">
+                                Test 04
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>

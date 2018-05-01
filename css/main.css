@@ -1,0 +1,15 @@
+header{
+    margin:0;
+    padding:0;
+    height:40vh;
+    background-color: #0277BD;
+    color:white;
+}
+.container
+{
+    margin-top:30px;
+}
+
+button{
+    background-color: #ECEFF1;
+}

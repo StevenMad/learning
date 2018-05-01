@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <style>
+        .courseContent {
+            overflow-y: scroll;
+            height: 84vh;
+        }
+
+        .exemple {
+            font-style: italic;
+            background-color: black;
+            color: green;
+        }
+
+        code {
+            background-color: black;
+            color: green;
+        }
+
+        body {
+            overflow-y: hidden;
+            background-color: #424242;
+            color: white;
+        }
+    </style>
+    <nav>
+        <div class="nav-wrapper light-blue accent-3">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li>
+                    <a href="css.html">CSS</a>
+                </li>
+                <li>
+                    <a href="js.html">JS</a>
+                </li>
+                <li>
+                    <a href="php">PHP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col s6 z-depth-2">
+            <div class="courseTitle">
+                <h3>Les Tags HTML</h3>
+            </div>
+            <div class="courseContent">
+                <p>Le langage HTML est un langage balisé</p>
+                <p>Pour écrire du code html il faut procéder comme suit:</p>
+                <p>la première balise à écrire est celle-ci:</p>
+                <code>&#60html&#62</code>
+                <p>A l'interieur le code est divisé en differentes parties</p>
+                <code>&#60head&#62&#60/head&#62</code> : Le head est l'en-tete
+                <p>Cette en-tete sert à déclarer des données qui ne sont pas affichées directement sur la page</p>
+                <span>Par exemple la balise &#60meta&#62 qui permet de déclarer les meta données</span>
+                <p class="exemple">Exemple : &#60meta charset="utf-8"&#62</p>
+                <p>Cette balise déclare que la norme utilisée pour l'encodage des caractères est utf-8</p>
+                <hr/>
+                <code>&#60body&#62&#60/body&#62</code> : C'est dans cette balise que se trouvent les contenu à afficher sur la page
+                <p>La page HTML se ferme avec la balise
+                    <code>&#60/html&#62</code>
+                </p>
+                <hr/>
+                <h5>Structure de la balise</h5>
+                <p>Il y a deux types de balises:</p>
+                <ul>
+                    <li>
+                        <p>Les balises normales :
+                            <code>&#60div&#62Du contenu&#60/div&#62</code>
+                        </p>
+                        <p>Ce sont les plus utilisées.</p>
+                        <p>Elles commencent par un
+                            <code>&#60</code> et suit le type de la balise</p>
+                        <p class="exemple">Exemple de types: div, p (paragraph), a(lien)</p>
+                        <p>Entre la balise ouvrante et la balise fermante se trouve du contenu. Ce contenu est le texte affiché
+                            sur l'ecran</p>
+                    </li>
+                    <li>
+                        <p>Les balises auto-fermantes :
+                            <code>&#60input/&#62</code>
+                        </p>
+                        <p>Ces balises sont utilisées lorsqu'il n y a pas de contenu à l'intérieur d'une balise</p>
+                        <p>Elles commencent par un
+                            <code>&#60</code> et suit le type de la balise</p>
+                        <p class="exemple">Exemple de types: div, p (paragraph), a(lien)</p>
+                    </li>
+                </ul>
+                <p>Les balises peuvent contenir des attributs. Ces attributs peuvent être placé dans un ordre quelconque.</p>
+                <p>Un attribut est structuré de la manière suivante:</p>
+                <code>nom-de-l-attribut = "valeur de l'attribut"</code>
+                <p>Les attributs permettent de preciser des comportements ou des informations à la balise.</p>
+                <p>Prenons l'exemple suivant:</p>
+                <p class="exemple">&#60input type="text" name="username" placeholder="Inserez le nom" class="inputClass"/&#62</p>
+                <p>La balise est une balise appelée input</p>
+                <p>C'est une balise auto-fermante</p>
+                <p>Elle contient plusieurs attributs: </p>
+                <p> un attribut <code>type</code> qui indique le type de l'input</p>
+                <p> un attribut <code>name</code> qui indique le nom de l'input. Il sera important pour récupérer les données d'un formulaire</p>
+                <p> un attribut <code>placeholder</code> qui indique le texte à afficher quand l'input est vide</p>
+                <p> un attribut <code>class</code> qui indique le nom de la classe à appliquer à l'input</p>
+            </div>
+        </div>
+        <div class="col s6 z-depth-2">
+            <div class="exercices">
+                <h5>Exercices</h5>
+                <p>Quelle est la bonne syntaxe ?</p>
+                <form action="#1">
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div class=entete&#62&#60/div&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div class="entete"&#62&#60/div&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div "class"=entete&#62&#60/div&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div class:"entete"&#62&#60/div&#62</span>
+                        </label>
+                    </p>
+                </form>
+                <p>Quelle est la bonne syntaxe ?</p>
+                <form action="#2">
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60input name="email" email="type"/&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60input class="name" type="username"/&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60input type=email name="email"/&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60input name="email" type="email"/&#62</span>
+                        </label>
+                    </p>
+                </form>
+                <p>Ou doit se situer la balise link ?</p>
+                <form action="#3">
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>Juste après &#60html&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>Dans le &#60head&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>Dans le &#60body&#62</span>
+                        </label>
+                    </p>
+                </form>
+                <p>Je veux afficher Un prenom et un age. J'ecris</p>
+                <form action="#4">
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div class="contenu"&#62Andy 25ans&#60/div&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div value="Andy 25 ans"&#62&#60/div&#62</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>&#60div name="Andy"&#62 25 ans&#60/div&#62</span>
+                        </label>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
